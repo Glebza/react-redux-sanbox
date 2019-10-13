@@ -1,15 +1,26 @@
 import React from 'react';
-import Counter from "../counter";
-import ErrorBoundry from "../error-boundry";
+import { Route, Switch } from 'react-router-dom';
+import { HomePage, CartPage } from '../pages';
+import ShopHeader from '../shopHeader';
+import './App.css';
 
 const App = () => {
-
     return (
-        <ErrorBoundry>
-            <Counter/>
-        </ErrorBoundry>
+        <main role="main" className="container">
+            <ShopHeader numItems={5} total={20000}/>
+            <Switch>
+                <Route
+                    path="/"
+                    component={HomePage}
+                    exact />
 
-    )
+                <Route
+                    path="/cart"
+                    component={CartPage}
+                />
+            </Switch>
+        </main>
+    );
 };
 
 export default App;
