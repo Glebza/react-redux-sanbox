@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import * as actions from '../actions/booksLoaded';
+import * as actions from '../actions/BooksLoaded';
 
 const Counter = ({value, inc, dec, rnd}) => {
     return (

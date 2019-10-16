@@ -1,8 +1,8 @@
 import React from 'react';
 import  './BookListItem.css';
 
-const BookListItem = ({book}) =>{
-    const {title,description,price,coverImage} = book;
+const BookListItem = ({bag}) =>{
+    const {title,description,price,coverImage} = bag;
     return (
         <div className="book-list-item">
             <div className="book-cover">
